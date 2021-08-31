@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react'
 import Code from '../../images/codificacao-da-web.png'
-import Web from '../../images/desenvolvimento-web.png'
-import Code from '../../images/codificacao-da-web.png'
 import { Header, ItemsNav, Container, Section, Card } from './style'
+import { Link } from 'react-router-dom'
 export default function Main(){
   const [title, setTitle] = useState([])
-  console.log(title)
-
-
+ 
   function handleGetPosts(){
     const url = 'http://localhost:8080/posts'
     fetch(url).then(post => post.json()).then(post => setTitle(post))
@@ -20,15 +17,13 @@ export default function Main(){
   return(
     <Container>
       <Header>
-      <img src={Code} alt="código"/>
-      <img src={Web} alt="código"/>
-      <img src={Code} alt="código"/>
+          <img src={Code} alt="código"/>
       <h2>Renan Oliveira</h2>
       <nav>
         <ItemsNav>
-          <li><h3>About</h3></li>
-          <li><h3>Contact</h3></li>
-          <li><h3>Projects</h3></li>
+          <li><h3><Link to= "/about">About</Link></h3></li>
+          <li><h3><Link to= "/contact">Contact</Link></h3></li>
+          <li><h3><Link to= "/projects">Projects</Link></h3></li>
         </ItemsNav>
       </nav>
       </Header>

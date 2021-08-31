@@ -4,6 +4,7 @@ import Main from "./pages/Main";
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Projects from "./pages/Projects"
+import Error from "./pages/Error";
 
 export default function Routes(){
   return( 
@@ -14,6 +15,7 @@ export default function Routes(){
          <Route exact path="/about" component={About}/>
          <Route exact path="/contact" component={Contact}/>
          <Route exact path="/Projects" component={Projects}/>
+         <Route path="*" component={Error}/>
     </Switch>
     </BrowserRouter>
   )

@@ -36,6 +36,7 @@ align-items: flex-end;
 li{
   margin: 0 10px;
 }
+
 `;
 
 export const Container = styled.div`
