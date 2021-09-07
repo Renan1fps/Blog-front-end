@@ -8,5 +8,6 @@ box-sizing: border-box;
 }
 body{
   background-color: #5f6971;
+  color: black;
 }
 `;
